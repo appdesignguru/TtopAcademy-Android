@@ -7,11 +7,11 @@ public class Topic {
 
     private final int topicID;
     private final int number;
-    private final int name;
+    private final String name;
     private Date dateSavedToLocalDatabase;
 
     /** Constructs a new instance. */
-    public Topic(int topicID, int number, int name, Date dateSavedToLocalDatabase) {
+    public Topic(int topicID, int number, String name, Date dateSavedToLocalDatabase) {
         this.topicID = topicID;
         this.number = number;
         this.name = name;
@@ -29,7 +29,7 @@ public class Topic {
     }
 
     /** Returns topic name. */
-    public int getName() {
+    public String getName() {
         return name;
     }
 
