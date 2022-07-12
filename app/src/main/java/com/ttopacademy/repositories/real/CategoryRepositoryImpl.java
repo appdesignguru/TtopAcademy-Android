@@ -43,7 +43,7 @@ public class CategoryRepositoryImpl implements CategoryRepository {
 
     @Override
     public List<Category> getAllCategoriesSync() {
-        if (!categoryLocalDataSource.isUpdated()){
+        if (categoryLocalDataSource.isOutdated()){
             refreshCategories();
         }
         return categoryLocalDataSource.getAllCategories();

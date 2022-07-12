@@ -7,7 +7,7 @@ import java.util.List;
 public interface CategoryLocalDataSource {
 
     /** Checks whether category local data source is up-to-date. */
-    boolean isUpdated();
+    boolean isOutdated();
 
     /** Returns all categories. */
     List<Category> getAllCategories();

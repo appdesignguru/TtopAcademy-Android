@@ -5,10 +5,10 @@ public class TopicResponse {
 
     private final int topicID;
     private final int number;
-    private final int name;
+    private final String name;
 
     /** Constructs a new instance. */
-    public TopicResponse(int topicID, int number, int name) {
+    public TopicResponse(int topicID, int number, String name) {
         this.topicID = topicID;
         this.number = number;
         this.name = name;
@@ -25,7 +25,7 @@ public class TopicResponse {
     }
 
     /** Returns topic name. */
-    public int getName() {
+    public String getName() {
         return name;
     }
 

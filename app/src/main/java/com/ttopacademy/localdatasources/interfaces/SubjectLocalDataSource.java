@@ -6,8 +6,8 @@ import java.util.List;
 /** Subject local data source interface. */
 public interface SubjectLocalDataSource {
 
-    /** Checks whether subject local data source is up-to-date. */
-    boolean isUpdated();
+    /** Checks whether subject local data source is NOT up-to-date. */
+    boolean isOutdated();
 
     /** Returns subjects with given parameters. */
     List<Subject> getSubjects(List<Integer> subjectIDs);

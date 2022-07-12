@@ -6,8 +6,8 @@ import java.util.List;
 /** CategorySubject local data source interface. */
 public interface CategorySubjectLocalDataSource {
 
-    /** Checks whether categorySubject local data source is up-to-date. */
-    boolean isUpdated();
+    /** Checks whether categorySubject local data source is NOT up-to-date. */
+    boolean isOutdated();
 
     /** Returns categorySubjects for given parameter. */
     List<CategorySubject> getCategorySubjects(int categoryID);

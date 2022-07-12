@@ -6,7 +6,7 @@ import java.util.List;
 public interface TopicLocalDataSource {
 
     /** Checks whether topic local data source is up-to-date. */
-    boolean isUpdated();
+    boolean isOutdated();
 
     /** Returns topics with given parameters. */
     List<Topic> getTopics(List<Integer> topicIDs);

@@ -27,7 +27,7 @@ public class CategorySubjectRepositoryImpl implements CategorySubjectRepository 
 
     @Override
     public int getCategorySubjectID(int categoryID, int subjectID) {
-        if (!categorySubjectLocalDataSource.isUpdated()){
+        if (categorySubjectLocalDataSource.isOutdated()){
             refreshCategorySubjects();
         }
         return categorySubjectLocalDataSource.getCategorySubjectID(categoryID, subjectID);
@@ -35,7 +35,7 @@ public class CategorySubjectRepositoryImpl implements CategorySubjectRepository 
 
     @Override
     public List<CategorySubject> getCategorySubjects(int categoryID) {
-        if (!categorySubjectLocalDataSource.isUpdated()){
+        if (!categorySubjectLocalDataSource.isOutdated()){
             refreshCategorySubjects();
         }
         return categorySubjectLocalDataSource.getCategorySubjects(categoryID);
