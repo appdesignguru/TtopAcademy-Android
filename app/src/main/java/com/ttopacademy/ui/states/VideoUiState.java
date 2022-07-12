@@ -14,16 +14,14 @@ public class VideoUiState {
     private final Category selectedCategory;
     private final Subject selectedSubject;
     private final Topic selectedTopic;
-    private final Video selectedVideo;
 
     public VideoUiState(boolean fetchingVideos, List<Video> videos, Category selectedCategory,
-                        Subject selectedSubject, Topic selectedTopic, Video selectedVideo) {
+                        Subject selectedSubject, Topic selectedTopic) {
         this.fetchingVideos = fetchingVideos;
         this.videos = videos;
         this.selectedCategory = selectedCategory;
         this.selectedSubject = selectedSubject;
         this.selectedTopic = selectedTopic;
-        this.selectedVideo = selectedVideo;
     }
 
     /** Checks whether videos are currently being fetched. */
@@ -51,8 +49,4 @@ public class VideoUiState {
         return selectedTopic;
     }
 
-    /** Returns selected video. */
-    public Video getSelectedVideo() {
-        return selectedVideo;
-    }
 }

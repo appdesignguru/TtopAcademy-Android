@@ -1,6 +1,7 @@
 package com.ttopacademy.ui.viewmodels;
 
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 import com.ttopacademy.localdatasources.entities.Category;
 import com.ttopacademy.localdatasources.entities.Subject;
 import com.ttopacademy.localdatasources.entities.Topic;
@@ -17,9 +18,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.inject.Inject;
+import dagger.hilt.android.lifecycle.HiltViewModel;
 
 /** Fake MainViewModel implementation class. */
-public class FakeMainViewModel implements MainViewModel {
+@HiltViewModel
+public class FakeMainViewModel extends ViewModel implements MainViewModel {
 
     private Category selectedCategory;
     private Subject selectedSubject;
@@ -88,7 +91,7 @@ public class FakeMainViewModel implements MainViewModel {
         );
 
         videoUiState.setValue(new VideoUiState(false, testVideos, selectedCategory,
-                selectedSubject, selectedTopic, selectedVideo));
+                selectedSubject, selectedTopic));
 
         return videoUiState;
     }
@@ -97,7 +100,7 @@ public class FakeMainViewModel implements MainViewModel {
     public MutableLiveData<VideoItemUiState> getVideoItemUiState() {
         MutableLiveData<VideoItemUiState> videoItemUiState = new MutableLiveData<>();
         videoItemUiState.setValue(
-                new VideoItemUiState(selectedCategory, selectedSubject, selectedTopic)
+                new VideoItemUiState(selectedCategory, selectedSubject, selectedTopic, selectedVideo)
         );
         return videoItemUiState;
     }
