@@ -6,18 +6,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-
 import com.ttopacademy.R;
 import com.ttopacademy.localdatasources.entities.Video;
 import com.ttopacademy.ui.viewmodels.FakeMainViewModel;
 import com.ttopacademy.ui.viewmodels.MainViewModel;
-
 import dagger.hilt.android.AndroidEntryPoint;
 
+/** Fragment for watching video. */
 @AndroidEntryPoint
 public class VideoFragment extends Fragment {
 

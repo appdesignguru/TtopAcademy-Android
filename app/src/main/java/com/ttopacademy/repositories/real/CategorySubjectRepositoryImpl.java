@@ -1,15 +1,12 @@
 package com.ttopacademy.repositories.real;
 
 import android.os.Handler;
-
 import com.ttopacademy.core.Result;
 import com.ttopacademy.localdatasources.entities.CategorySubject;
 import com.ttopacademy.localdatasources.interfaces.CategorySubjectLocalDataSource;
 import com.ttopacademy.remotedatasources.entities.CategorySubjectResponse;
-import com.ttopacademy.remotedatasources.interfaces.CategoryRemoteDataSource;
 import com.ttopacademy.remotedatasources.interfaces.CategorySubjectRemoteDataSource;
 import com.ttopacademy.repositories.interfaces.CategorySubjectRepository;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

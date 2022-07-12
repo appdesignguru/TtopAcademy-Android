@@ -15,10 +15,10 @@ import com.ttopacademy.R;
 import com.ttopacademy.localdatasources.entities.Subject;
 import com.ttopacademy.ui.viewmodels.FakeMainViewModel;
 import com.ttopacademy.ui.viewmodels.MainViewModel;
-import java.util.ArrayList;
 import java.util.List;
 import dagger.hilt.android.AndroidEntryPoint;
 
+/** Fragment for showing subjects. */
 @AndroidEntryPoint
 public class SubjectListFragment extends Fragment {
 
@@ -61,6 +61,7 @@ public class SubjectListFragment extends Fragment {
         recyclerView.setAdapter(subjectAdapter);
     }
 
+    /** Navigates to the topics UI screen. */
     public void navigateToTopicListFragment(Subject subject){
         mainViewModel.setSelectedSubject(subject);
         requireActivity().getSupportFragmentManager().beginTransaction()

@@ -9,6 +9,7 @@ import com.ttopacademy.ui.fragments.CategoryListFragment;
 import com.ttopacademy.ui.viewmodels.FakeMainViewModel;
 import com.ttopacademy.ui.viewmodels.MainViewModel;
 
+/** Main Activity for app. */
 public class MainActivity extends AppCompatActivity {
 
     @Override

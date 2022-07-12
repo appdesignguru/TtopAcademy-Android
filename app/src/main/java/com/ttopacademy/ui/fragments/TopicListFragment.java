@@ -15,10 +15,10 @@ import com.ttopacademy.R;
 import com.ttopacademy.localdatasources.entities.Topic;
 import com.ttopacademy.ui.viewmodels.FakeMainViewModel;
 import com.ttopacademy.ui.viewmodels.MainViewModel;
-import java.util.ArrayList;
 import java.util.List;
 import dagger.hilt.android.AndroidEntryPoint;
 
+/** Fragment for showing topics. */
 @AndroidEntryPoint
 public class TopicListFragment extends Fragment {
 
@@ -61,6 +61,7 @@ public class TopicListFragment extends Fragment {
         recyclerView.setAdapter(topicAdapter);
     }
 
+    /** Navigates to the videos UI screen. */
     public void navigateToVideoListFragment(Topic topic){
         mainViewModel.setSelectedTopic(topic);
         requireActivity().getSupportFragmentManager().beginTransaction()
