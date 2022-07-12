@@ -1,7 +1,6 @@
 package com.ttopacademy.repositories.interfaces;
 
 import com.ttopacademy.localdatasources.entities.CategorySubjectTopic;
-
 import java.util.List;
 
 /** Repository interface for CategorySubjectTopics. */

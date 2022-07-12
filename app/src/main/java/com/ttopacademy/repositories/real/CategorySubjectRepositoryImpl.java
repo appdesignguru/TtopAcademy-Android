@@ -1,6 +1,5 @@
 package com.ttopacademy.repositories.real;
 
-import android.os.Handler;
 import com.ttopacademy.core.Result;
 import com.ttopacademy.localdatasources.entities.CategorySubject;
 import com.ttopacademy.localdatasources.interfaces.CategorySubjectLocalDataSource;
@@ -10,7 +9,6 @@ import com.ttopacademy.repositories.interfaces.CategorySubjectRepository;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.Executor;
 import javax.inject.Inject;
 
 /** CategorySubjectRepository Implementation class. */
@@ -18,18 +16,13 @@ public class CategorySubjectRepositoryImpl implements CategorySubjectRepository 
 
     private final CategorySubjectLocalDataSource categorySubjectLocalDataSource;
     private final CategorySubjectRemoteDataSource categorySubjectRemoteDataSource;
-    private final Executor executor;
-    private final Handler resultHandler;
 
     /** Constructs a new instance. */
     @Inject
     public CategorySubjectRepositoryImpl(CategorySubjectLocalDataSource categorySubjectLocalDataSource,
-                                         CategorySubjectRemoteDataSource categorySubjectRemoteDataSource,
-                                         Executor executor, Handler resultHandler) {
+                                         CategorySubjectRemoteDataSource categorySubjectRemoteDataSource) {
         this.categorySubjectLocalDataSource = categorySubjectLocalDataSource;
         this.categorySubjectRemoteDataSource = categorySubjectRemoteDataSource;
-        this.executor = executor;
-        this.resultHandler = resultHandler;
     }
 
     @Override

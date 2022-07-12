@@ -2,7 +2,6 @@ package com.ttopacademy.repositories.interfaces;
 
 import com.ttopacademy.core.ResultCallback;
 import com.ttopacademy.localdatasources.entities.practicequestions.PracticeQuestion;
-
 import java.util.List;
 
 /** Repository interface for practice questions. */

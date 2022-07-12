@@ -1,7 +1,6 @@
 package com.ttopacademy.ui.viewmodels;
 
 import androidx.lifecycle.MutableLiveData;
-
 import com.ttopacademy.localdatasources.entities.Category;
 import com.ttopacademy.localdatasources.entities.Subject;
 import com.ttopacademy.localdatasources.entities.Topic;

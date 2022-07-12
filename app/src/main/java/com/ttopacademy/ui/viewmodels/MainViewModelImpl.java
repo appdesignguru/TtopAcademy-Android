@@ -17,11 +17,8 @@ import com.ttopacademy.ui.states.SubjectUiState;
 import com.ttopacademy.ui.states.TopicUiState;
 import com.ttopacademy.ui.states.VideoItemUiState;
 import com.ttopacademy.ui.states.VideoUiState;
-
 import java.util.ArrayList;
-
 import javax.inject.Inject;
-
 import dagger.hilt.android.lifecycle.HiltViewModel;
 
 /** MainViewModel implementation class. */
