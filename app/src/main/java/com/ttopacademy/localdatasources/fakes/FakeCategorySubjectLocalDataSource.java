@@ -25,7 +25,13 @@ public class FakeCategorySubjectLocalDataSource implements CategorySubjectLocalD
 
     @Override
     public List<CategorySubject> getCategorySubjects(int categoryID) {
-        return categorySubjects;
+        List<CategorySubject> result = new ArrayList<>();
+        for (CategorySubject categorySubject : categorySubjects){
+            if (categorySubject.getCategoryID() == categoryID){
+                result.add(categorySubject);
+            }
+        }
+        return result;
     }
 
     @Override
@@ -41,6 +47,7 @@ public class FakeCategorySubjectLocalDataSource implements CategorySubjectLocalD
 
     @Override
     public boolean saveCategorySubjects(List<CategorySubject> categorySubjects) {
+        this.categorySubjects.clear();
         this.categorySubjects.addAll(categorySubjects);
         outdated = false;
         return true;

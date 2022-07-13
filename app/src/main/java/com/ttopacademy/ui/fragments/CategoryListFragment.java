@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.ttopacademy.R;
 import com.ttopacademy.localdatasources.entities.Category;
-import com.ttopacademy.ui.viewmodels.FakeMainViewModel;
 import com.ttopacademy.ui.viewmodels.MainViewModel;
+import com.ttopacademy.ui.viewmodels.MainViewModelImpl;
 import java.util.List;
 import dagger.hilt.android.AndroidEntryPoint;
 
@@ -40,7 +40,7 @@ public class CategoryListFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
-        mainViewModel = new ViewModelProvider(requireActivity()).get(FakeMainViewModel.class);
+        mainViewModel = new ViewModelProvider(requireActivity()).get(MainViewModelImpl.class);
         mainViewModel.getCategoryUiState().observe(
                 getViewLifecycleOwner(), result -> {
                     if (result.isFetchingCategories()){

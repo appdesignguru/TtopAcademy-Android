@@ -38,6 +38,7 @@ public class FakeSubjectLocalDataSource implements SubjectLocalDataSource {
 
     @Override
     public boolean saveSubjects(List<Subject> subjects) {
+        this.subjects.clear();
         this.subjects.addAll(subjects);
         outdated = false;
         return true;

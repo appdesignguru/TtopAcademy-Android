@@ -25,7 +25,7 @@ public class CategorySubjectTopic {
     }
 
     /** Returns categorySubjectID. */
-    public int getCategorySUbjectID() {
+    public int getCategorySubjectID() {
         return categorySubjectID;
     }
 

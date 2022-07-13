@@ -5,11 +5,13 @@ import com.ttopacademy.repositories.interfaces.VideoRepository;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.inject.Inject;
 
 /** Fake Video repository implementation class. Used for unit testing only. */
 public class FakeVideoRepository implements VideoRepository {
 
     /** Constructs a new instance. */
+    @Inject
     public FakeVideoRepository(){
 
     }

@@ -6,10 +6,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 import com.ttopacademy.ui.fragments.CategoryListFragment;
-import com.ttopacademy.ui.viewmodels.FakeMainViewModel;
 import com.ttopacademy.ui.viewmodels.MainViewModel;
+import com.ttopacademy.ui.viewmodels.MainViewModelImpl;
+import dagger.hilt.android.AndroidEntryPoint;
 
 /** Main Activity for app. */
+@AndroidEntryPoint
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MainViewModel model = new ViewModelProvider(this).get(FakeMainViewModel.class);
+        MainViewModel model = new ViewModelProvider(this).get(MainViewModelImpl.class);
 
         FragmentManager fm = getSupportFragmentManager();
         Fragment fragment = fm.findFragmentById(R.id.fragment_container_view);

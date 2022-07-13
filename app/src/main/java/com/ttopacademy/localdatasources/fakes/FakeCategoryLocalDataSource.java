@@ -30,6 +30,7 @@ public class FakeCategoryLocalDataSource implements CategoryLocalDataSource {
 
     @Override
     public boolean saveCategories(List<Category> categories) {
+        this.categories.clear();
         this.categories.addAll(categories);
         outdated = false;
         return true;

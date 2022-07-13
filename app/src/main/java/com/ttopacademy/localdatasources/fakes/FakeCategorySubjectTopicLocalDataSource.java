@@ -5,6 +5,8 @@ import com.ttopacademy.localdatasources.interfaces.CategorySubjectTopicLocalData
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 /** Fake CategorySubjectTopic local data source implementation class. Used for unit testing only. */
 public class FakeCategorySubjectTopicLocalDataSource implements CategorySubjectTopicLocalDataSource {
 
@@ -12,6 +14,7 @@ public class FakeCategorySubjectTopicLocalDataSource implements CategorySubjectT
     private boolean outdated = true;
 
     /** Constructs a new instance. */
+    @Inject
     public FakeCategorySubjectTopicLocalDataSource() {
 
     }
@@ -24,7 +27,7 @@ public class FakeCategorySubjectTopicLocalDataSource implements CategorySubjectT
     @Override
     public int getCategorySubjectTopicID(int categorySubjectID, int topicID) {
         for (CategorySubjectTopic categorySubjectTopic : categorySubjectTopics){
-            if (categorySubjectTopic.getCategorySUbjectID() == categorySubjectID
+            if (categorySubjectTopic.getCategorySubjectID() == categorySubjectID
                     && categorySubjectTopic.getTopicID() == topicID){
                 return categorySubjectTopic.getCategorySubjectTopicID();
             }
@@ -34,11 +37,18 @@ public class FakeCategorySubjectTopicLocalDataSource implements CategorySubjectT
 
     @Override
     public List<CategorySubjectTopic> getCategorySubjectTopics(int categorySubjectID) {
-        return categorySubjectTopics;
+        List<CategorySubjectTopic> result = new ArrayList<>();
+        for (CategorySubjectTopic categorySubjectTopic : categorySubjectTopics){
+            if (categorySubjectTopic.getCategorySubjectID() == categorySubjectID){
+                result.add(categorySubjectTopic);
+            }
+        }
+        return result;
     }
 
     @Override
     public boolean saveCategorySubjectTopics(List<CategorySubjectTopic> categorySubjectTopics) {
+        this.categorySubjectTopics.clear();
         this.categorySubjectTopics.addAll(categorySubjectTopics);
         outdated = false;
         return true;

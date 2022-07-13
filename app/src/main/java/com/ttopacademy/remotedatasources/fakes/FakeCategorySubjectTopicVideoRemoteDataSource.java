@@ -6,10 +6,13 @@ import com.ttopacademy.remotedatasources.interfaces.CategorySubjectTopicVideoRem
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 /** Fake CategorySubjectTopicVideo remote data source implementation class. Used for unit testing only. */
 public class FakeCategorySubjectTopicVideoRemoteDataSource implements CategorySubjectTopicVideoRemoteDataSource {
 
     /** Constructs a new instance. */
+    @Inject
     public FakeCategorySubjectTopicVideoRemoteDataSource() {
 
     }

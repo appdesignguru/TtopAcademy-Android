@@ -35,7 +35,13 @@ public class FakeCategorySubjectTopicVideoLocalDataSource implements CategorySub
 
     @Override
     public List<CategorySubjectTopicVideo> getCategorySubjectTopicVideos(int categorySubjectTopicID) {
-        return categorySubjectTopicVideos;
+        List<CategorySubjectTopicVideo> result = new ArrayList<>();
+        for (CategorySubjectTopicVideo categorySubjectTopicVideo : categorySubjectTopicVideos){
+            if (categorySubjectTopicVideo.getCategorySubjectTopicID() == categorySubjectTopicID){
+                result.add(categorySubjectTopicVideo);
+            }
+        }
+        return result;
     }
 
     @Override

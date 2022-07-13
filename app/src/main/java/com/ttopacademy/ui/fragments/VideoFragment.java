@@ -11,8 +11,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import com.ttopacademy.R;
 import com.ttopacademy.localdatasources.entities.Video;
-import com.ttopacademy.ui.viewmodels.FakeMainViewModel;
 import com.ttopacademy.ui.viewmodels.MainViewModel;
+import com.ttopacademy.ui.viewmodels.MainViewModelImpl;
 import dagger.hilt.android.AndroidEntryPoint;
 
 /** Fragment for watching video. */
@@ -37,7 +37,7 @@ public class VideoFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
-        MainViewModel mainViewModel = new ViewModelProvider(requireActivity()).get(FakeMainViewModel.class);
+        MainViewModel mainViewModel = new ViewModelProvider(requireActivity()).get(MainViewModelImpl.class);
         mainViewModel.getVideoItemUiState().observe(
                 getViewLifecycleOwner(), result -> {
                     video = result.getSelectedVideo();

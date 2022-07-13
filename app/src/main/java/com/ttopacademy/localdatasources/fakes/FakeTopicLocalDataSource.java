@@ -38,6 +38,7 @@ public class FakeTopicLocalDataSource implements TopicLocalDataSource {
 
     @Override
     public boolean saveTopics(List<Topic> topics) {
+        this.topics.clear();
         this.topics.addAll(topics);
         outdated = false;
         return false;

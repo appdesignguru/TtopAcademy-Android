@@ -25,6 +25,6 @@ public class FakeVideoRemoteDataSource implements VideoRemoteDataSource {
                 "solution youtube 2", "10"));
 
 
-        return null;
+        return new Result.Success<>(mockVideoResponses);
     }
 }
