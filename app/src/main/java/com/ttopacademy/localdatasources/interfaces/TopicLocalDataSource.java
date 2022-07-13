@@ -3,6 +3,7 @@ package com.ttopacademy.localdatasources.interfaces;
 import com.ttopacademy.localdatasources.entities.Topic;
 import java.util.List;
 
+/** Topic local data source interface. */
 public interface TopicLocalDataSource {
 
     /** Checks whether topic local data source is up-to-date. */

@@ -9,6 +9,7 @@ import com.ttopacademy.repositories.interfaces.TopicRepository;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.inject.Inject;
 
 /** TopicRepository implementation class. */
 public class TopicRepositoryImpl implements TopicRepository {
@@ -17,6 +18,7 @@ public class TopicRepositoryImpl implements TopicRepository {
     private final TopicRemoteDataSource topicRemoteDataSource;
 
     /** Constructs a new instance. */
+    @Inject
     public TopicRepositoryImpl(TopicLocalDataSource topicLocalDataSource,
                                TopicRemoteDataSource topicRemoteDataSource) {
         this.topicLocalDataSource = topicLocalDataSource;

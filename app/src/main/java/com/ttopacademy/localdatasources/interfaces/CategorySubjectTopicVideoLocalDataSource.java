@@ -3,6 +3,7 @@ package com.ttopacademy.localdatasources.interfaces;
 import com.ttopacademy.localdatasources.entities.CategorySubjectTopicVideo;
 import java.util.List;
 
+/** CategorySubjectTopicVideo local data source interface. */
 public interface CategorySubjectTopicVideoLocalDataSource {
 
     /** Checks whether CategorySubjectTopicVideo local data source is NOT up-to-date for given parameter. */

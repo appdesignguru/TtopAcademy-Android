@@ -8,5 +8,5 @@ import java.util.List;
 public interface VideoRemoteDataSource {
 
     /** Returns video responses for given parameter. */
-    Result<List<VideoResponse>> getVideos(int categorySubjectTopicVideoID);
+    Result<List<VideoResponse>> getVideos(int categorySubjectTopicID);
 }

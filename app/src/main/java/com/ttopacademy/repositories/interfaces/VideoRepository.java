@@ -7,5 +7,5 @@ import java.util.List;
 public interface  VideoRepository {
 
     /** Returns videos with given parameters. */
-    List<Video> getVideos(List<Integer> videoIDs);
+    List<Video> getVideos(int categorySubjectTopicID, List<Integer> videoIDs);
 }

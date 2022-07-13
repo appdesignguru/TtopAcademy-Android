@@ -58,7 +58,7 @@ public class VideoManagerImpl implements VideoManager {
         for (CategorySubjectTopicVideo categorySubjectTopicVideo : categorySubjectTopicVideos){
             videoIDs.add(categorySubjectTopicVideo.getVideoID());
         }
-        return videoRepository.getVideos(videoIDs);
+        return videoRepository.getVideos(categorySubjectTopicID, videoIDs);
     }
 
     private void postResultToMainThread(final List<Video> result,
