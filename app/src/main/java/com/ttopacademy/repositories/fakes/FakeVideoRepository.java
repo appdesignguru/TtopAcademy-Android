@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-/** Fake Video repository implementation class. */
+/** Fake Video repository implementation class. Used for unit testing only. */
 public class FakeVideoRepository implements VideoRepository {
 
     /** Constructs a new instance. */

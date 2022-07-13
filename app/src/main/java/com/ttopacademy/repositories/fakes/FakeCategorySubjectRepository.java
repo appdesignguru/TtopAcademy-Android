@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 import javax.inject.Inject;
 
-/** Fake CategorySubject repository implementation class. */
+/** Fake CategorySubject repository implementation class. Used for unit testing only. */
 public class FakeCategorySubjectRepository implements CategorySubjectRepository {
 
     /** Constructs a new instance. */

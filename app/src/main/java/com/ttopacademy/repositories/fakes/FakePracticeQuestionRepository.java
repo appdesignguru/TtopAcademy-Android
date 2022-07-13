@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.List;
 import javax.inject.Inject;
 
-/** Fake PracticeQuestion repository implementation class. */
+/** Fake PracticeQuestion repository implementation class. Used for unit testing only. */
 public class FakePracticeQuestionRepository implements PracticeQuestionRepository {
 
     /** Constructs a new instance. */
