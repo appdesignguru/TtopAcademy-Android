@@ -35,10 +35,10 @@ public class CategorySubjectTopicRepositoryTest {
 
     @Test
     public void getCategorySubjectTopicID_ShouldReturnValueForGivenParameters(){
-        int categorySubjectID = 4;
-        int topicID = 3;
+        int categorySubjectID = 1;
+        int topicID = 1;
         int result = categorySubjectTopicRepository.getCategorySubjectTopicID(categorySubjectID, topicID);
-        assertEquals(7, result);
+        assertEquals(1, result);
     }
 
     @Test
