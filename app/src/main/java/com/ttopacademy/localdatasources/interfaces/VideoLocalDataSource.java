@@ -7,7 +7,7 @@ import java.util.List;
 public interface VideoLocalDataSource {
 
     /** Checks whether Video local data source is NOT up-to-date for given parameter. */
-    boolean hasOutdatedVideos(int categorySubjectTopicVideoID);
+    boolean hasOutdatedVideos(List<Integer> videoIDs);
 
     /** Returns videos with given parameters. */
     List<Video> getVideos(List<Integer> videoIDs);

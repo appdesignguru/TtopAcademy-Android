@@ -1,7 +1,6 @@
 package com.ttopacademy.localdatasources.entities.practicequestions;
 
 import androidx.room.PrimaryKey;
-
 import java.util.Date;
 
 /** PracticeQuestion entity class. */

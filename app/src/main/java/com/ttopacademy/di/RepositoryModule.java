@@ -1,5 +1,7 @@
 package com.ttopacademy.di;
 
+import com.ttopacademy.repositories.fakes.FakeCategorySubjectTopicVideoRepository;
+import com.ttopacademy.repositories.fakes.FakeVideoRepository;
 import com.ttopacademy.repositories.interfaces.CategoryRepository;
 import com.ttopacademy.repositories.interfaces.CategorySubjectRepository;
 import com.ttopacademy.repositories.interfaces.CategorySubjectTopicRepository;
@@ -59,7 +61,7 @@ public abstract class RepositoryModule {
     @Binds
     @Singleton
     public abstract CategorySubjectTopicVideoRepository bindCategorySubjectTopicVideoRepository(
-            CategorySubjectTopicVideoRepositoryImpl categorySubjectTopicVideoRepositoryImpl
+            FakeCategorySubjectTopicVideoRepository categorySubjectTopicVideoRepositoryImpl
     );
 
     /** Injects TopicRepository implementation with given parameter. */

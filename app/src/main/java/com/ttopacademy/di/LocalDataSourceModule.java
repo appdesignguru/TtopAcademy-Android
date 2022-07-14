@@ -1,13 +1,7 @@
 package com.ttopacademy.di;
 
-import com.ttopacademy.localdatasources.fakes.FakeCategoryLocalDataSource;
-import com.ttopacademy.localdatasources.fakes.FakeCategorySubjectLocalDataSource;
-import com.ttopacademy.localdatasources.fakes.FakeCategorySubjectTopicLocalDataSource;
-import com.ttopacademy.localdatasources.fakes.FakeCategorySubjectTopicVideoLocalDataSource;
+
 import com.ttopacademy.localdatasources.fakes.FakePracticeQuestionLocalDataSource;
-import com.ttopacademy.localdatasources.fakes.FakeSubjectLocalDataSource;
-import com.ttopacademy.localdatasources.fakes.FakeTopicLocalDataSource;
-import com.ttopacademy.localdatasources.fakes.FakeVideoLocalDataSource;
 import com.ttopacademy.localdatasources.interfaces.CategoryLocalDataSource;
 import com.ttopacademy.localdatasources.interfaces.CategorySubjectLocalDataSource;
 import com.ttopacademy.localdatasources.interfaces.CategorySubjectTopicLocalDataSource;
@@ -16,6 +10,14 @@ import com.ttopacademy.localdatasources.interfaces.PracticeQuestionLocalDataSour
 import com.ttopacademy.localdatasources.interfaces.SubjectLocalDataSource;
 import com.ttopacademy.localdatasources.interfaces.TopicLocalDataSource;
 import com.ttopacademy.localdatasources.interfaces.VideoLocalDataSource;
+import com.ttopacademy.localdatasources.roomdb.CategoryLocalDataSourceImpl;
+import com.ttopacademy.localdatasources.roomdb.CategorySubjectLocalDataSourceImpl;
+import com.ttopacademy.localdatasources.roomdb.CategorySubjectTopicLocalDataSourceImpl;
+import com.ttopacademy.localdatasources.roomdb.CategorySubjectTopicVideoLocalDataSourceImpl;
+import com.ttopacademy.localdatasources.roomdb.SubjectLocalDataSourceImpl;
+import com.ttopacademy.localdatasources.roomdb.TopicLocalDataSourceImpl;
+import com.ttopacademy.localdatasources.roomdb.VideoLocalDataSourceImpl;
+
 import javax.inject.Singleton;
 import dagger.Binds;
 import dagger.Module;
@@ -31,28 +33,28 @@ public abstract class LocalDataSourceModule {
     @Binds
     @Singleton
     public abstract CategoryLocalDataSource bindCategoryLocalDataSource(
-            FakeCategoryLocalDataSource categoryLocalDataSourceImpl
+            CategoryLocalDataSourceImpl categoryLocalDataSourceImpl
     );
 
     /** Injects CategorySubjectLocalDataSource implementation with given parameter. */
     @Binds
     @Singleton
     public abstract CategorySubjectLocalDataSource bindCategorySubjectLocalDataSource(
-            FakeCategorySubjectLocalDataSource categorySubjectLocalDataSourceImpl
+            CategorySubjectLocalDataSourceImpl categorySubjectLocalDataSourceImpl
     );
 
     /** Injects CategorySubjectTopicLocalDataSource implementation with given parameter. */
     @Binds
     @Singleton
     public abstract CategorySubjectTopicLocalDataSource bindCategorySubjectTopicLocalDataSource(
-            FakeCategorySubjectTopicLocalDataSource categorySubjectTopicLocalDataSourceImpl
+            CategorySubjectTopicLocalDataSourceImpl categorySubjectTopicLocalDataSourceImpl
     );
 
     /** Injects CategorySubjectTopicVideoLocalDataSource implementation with given parameter. */
     @Binds
     @Singleton
     public abstract CategorySubjectTopicVideoLocalDataSource bindCategorySubjectTopicVideoLocalDataSource(
-            FakeCategorySubjectTopicVideoLocalDataSource categorySubjectTopicVideoLocalDataSourceImpl
+            CategorySubjectTopicVideoLocalDataSourceImpl categorySubjectTopicVideoLocalDataSourceImpl
     );
 
     /** Injects PracticeQuestionLocalDataSource implementation with given parameter. */
@@ -67,20 +69,20 @@ public abstract class LocalDataSourceModule {
     @Binds
     @Singleton
     public abstract SubjectLocalDataSource bindSubjectLocalDataSource(
-            FakeSubjectLocalDataSource subjectLocalDataLocalSourceImpl
+            SubjectLocalDataSourceImpl subjectLocalDataLocalSourceImpl
     );
 
     /** Injects TopicLocalDataSource implementation with given parameter. */
     @Binds
     @Singleton
     public abstract TopicLocalDataSource bindTopicLocalDataSource(
-            FakeTopicLocalDataSource topicLocalDataSourceImpl
+            TopicLocalDataSourceImpl topicLocalDataSourceImpl
     );
 
     /** Injects VideoLocalDataSource implementation with given parameter. */
     @Binds
     @Singleton
     public abstract VideoLocalDataSource bindVideoLocalDataSource(
-            FakeVideoLocalDataSource videoLocalDataSourceImpl
+            VideoLocalDataSourceImpl videoLocalDataSourceImpl
     );
 }

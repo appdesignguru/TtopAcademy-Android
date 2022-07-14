@@ -18,7 +18,7 @@ public class FakeVideoLocalDataSource implements VideoLocalDataSource {
     }
 
     @Override
-    public boolean hasOutdatedVideos(int categorySubjectTopicVideoID) {
+    public boolean hasOutdatedVideos(List<Integer> videoIDs) {
         return true;
     }
 

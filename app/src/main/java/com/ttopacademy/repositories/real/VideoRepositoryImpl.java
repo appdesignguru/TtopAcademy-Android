@@ -27,7 +27,7 @@ public class VideoRepositoryImpl implements VideoRepository {
 
     @Override
     public List<Video> getVideos(int categorySubjectTopicID, List<Integer> videoIDs) {
-        if (videoLocalDataSource.hasOutdatedVideos(categorySubjectTopicID)){
+        if (videoLocalDataSource.hasOutdatedVideos(videoIDs)){
             refreshVideos(categorySubjectTopicID);
         }
         return videoLocalDataSource.getVideos(videoIDs);
