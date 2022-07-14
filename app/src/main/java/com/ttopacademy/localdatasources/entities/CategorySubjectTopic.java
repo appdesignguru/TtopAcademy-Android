@@ -1,11 +1,16 @@
 package com.ttopacademy.localdatasources.entities;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 import java.util.Date;
 
 /** CategorySubjectTopic entity class. */
+@Entity
 public class CategorySubjectTopic {
 
+    @PrimaryKey
     private final int categorySubjectTopicID;
+
     private final int categorySubjectID;
     private final int topicID;
     private Date dateSavedToLocalDatabase;

@@ -1,8 +1,10 @@
 package com.ttopacademy.localdatasources.entities.practicequestions;
 
+import androidx.room.Entity;
 import java.util.Date;
 
 /** OtherPracticeQuestion entity class. */
+@Entity
 public class OtherPracticeQuestion extends PracticeQuestion{
 
     /** Constructs a new instance. */

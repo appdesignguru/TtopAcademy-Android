@@ -1,11 +1,16 @@
 package com.ttopacademy.localdatasources.entities;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 import java.util.Date;
 
 /** Video entity class. */
+@Entity
 public class Video {
 
+    @PrimaryKey
     private final int videoID;
+
     private final String title;
     private final String youtubeID;
     private final String size;

@@ -1,11 +1,15 @@
 package com.ttopacademy.localdatasources.entities.practicequestions;
 
+import androidx.room.PrimaryKey;
+
 import java.util.Date;
 
 /** PracticeQuestion entity class. */
 public class PracticeQuestion {
 
+    @PrimaryKey
     private final int practiceQuestionID;
+
     private final int videoID;
     private final int questionNumber;
     private final String question;

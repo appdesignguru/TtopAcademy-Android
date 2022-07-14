@@ -8,6 +8,7 @@ public interface VideoLocalDataSource {
 
     /** Checks whether Video local data source is NOT up-to-date for given parameter. */
     boolean hasOutdatedVideos(int categorySubjectTopicVideoID);
+
     /** Returns videos with given parameters. */
     List<Video> getVideos(List<Integer> videoIDs);
 
