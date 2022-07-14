@@ -10,6 +10,7 @@ import com.ttopacademy.repositories.interfaces.CategorySubjectTopicRepository;
 import com.ttopacademy.repositories.interfaces.CategorySubjectTopicVideoRepository;
 import com.ttopacademy.repositories.interfaces.VideoRepository;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.Executor;
 import javax.inject.Inject;
@@ -52,8 +53,10 @@ public class VideoManagerImpl implements VideoManager {
         int categorySubjectID = categorySubjectRepository.getCategorySubjectID(categoryID, subjectID);
         int categorySubjectTopicID
                 = categorySubjectTopicRepository.getCategorySubjectTopicID(categorySubjectID, subjectID);
+
         List<CategorySubjectTopicVideo> categorySubjectTopicVideos
                 = categorySubjectTopicVideoRepository.getCategorySubjectTopicVideos(categorySubjectTopicID);
+
         List<Integer> videoIDs = new ArrayList<>();
         for (CategorySubjectTopicVideo categorySubjectTopicVideo : categorySubjectTopicVideos){
             videoIDs.add(categorySubjectTopicVideo.getVideoID());

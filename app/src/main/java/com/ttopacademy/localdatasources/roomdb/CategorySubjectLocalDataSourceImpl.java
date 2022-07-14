@@ -4,7 +4,6 @@ import com.ttopacademy.localdatasources.entities.CategorySubject;
 import com.ttopacademy.localdatasources.interfaces.CategorySubjectLocalDataSource;
 import com.ttopacademy.localdatasources.roomdb.dao.CategorySubjectDao;
 import com.ttopacademy.utitlities.interfaces.DateTimeUtility;
-
 import java.util.Date;
 import java.util.List;
 import javax.inject.Inject;
@@ -13,14 +12,14 @@ import javax.inject.Inject;
 public class CategorySubjectLocalDataSourceImpl implements CategorySubjectLocalDataSource {
 
     private final CategorySubjectDao categorySubjectDao;
-    private final DateTimeUtility dateTimeUtitlity;
+    private final DateTimeUtility dateTimeUtility;
 
     /** Constructs a new instance. */
     @Inject
     public CategorySubjectLocalDataSourceImpl(CategorySubjectDao categorySubjectDao,
-                                              DateTimeUtility dateTimeUtitlity) {
+                                              DateTimeUtility dateTimeUtility) {
         this.categorySubjectDao = categorySubjectDao;
-        this.dateTimeUtitlity = dateTimeUtitlity;
+        this.dateTimeUtility = dateTimeUtility;
     }
 
     @Override
@@ -30,7 +29,7 @@ public class CategorySubjectLocalDataSourceImpl implements CategorySubjectLocalD
         if (lastUpdated == null){
             return true;
         }
-        long dayDifference = dateTimeUtitlity.numberOfDaysbetween(todaysDate, lastUpdated);
+        long dayDifference = dateTimeUtility.numberOfDaysbetween(todaysDate, lastUpdated);
         return dayDifference > 1;
     }
 

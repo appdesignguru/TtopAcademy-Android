@@ -18,10 +18,8 @@ public class FakeTopicRemoteDataSource implements TopicRemoteDataSource {
     @Override
     public Result<List<TopicResponse>> getAllTopics() {
         List<TopicResponse> mockTopicResponses = new ArrayList<>();
-        mockTopicResponses.add(new TopicResponse(1, 1, "Motion"));
-        mockTopicResponses.add(new TopicResponse(2, 2, "Machines"));
-        mockTopicResponses.add(new TopicResponse(3, 3, "Gas Laws"));
-        mockTopicResponses.add(new TopicResponse(4, 4, "Chemical bonding"));
+        mockTopicResponses.add(new TopicResponse(1, 1, "Topic 1"));
+        mockTopicResponses.add(new TopicResponse(2, 2, "Topic 2"));
 
         return new Result.Success<>(mockTopicResponses);
     }

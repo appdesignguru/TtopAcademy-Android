@@ -12,13 +12,13 @@ import javax.inject.Inject;
 public class CategoryLocalDataSourceImpl implements CategoryLocalDataSource {
 
     private final CategoryDao categoryDao;
-    private final DateTimeUtility dateTimeUtitlity;
+    private final DateTimeUtility dateTimeUtility;
 
     /** Constructs a new instance. */
     @Inject
-    public CategoryLocalDataSourceImpl(CategoryDao categoryDao, DateTimeUtility dateTimeUtitlity) {
+    public CategoryLocalDataSourceImpl(CategoryDao categoryDao, DateTimeUtility dateTimeUtility) {
         this.categoryDao = categoryDao;
-        this.dateTimeUtitlity = dateTimeUtitlity;
+        this.dateTimeUtility = dateTimeUtility;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class CategoryLocalDataSourceImpl implements CategoryLocalDataSource {
         if (lastUpdated == null){
             return true;
         }
-        long dayDifference = dateTimeUtitlity.numberOfDaysbetween(todaysDate, lastUpdated);
+        long dayDifference = dateTimeUtility.numberOfDaysbetween(todaysDate, lastUpdated);
         return dayDifference > 1;
     }
 

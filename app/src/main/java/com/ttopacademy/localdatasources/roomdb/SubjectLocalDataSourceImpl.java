@@ -4,7 +4,6 @@ import com.ttopacademy.localdatasources.entities.Subject;
 import com.ttopacademy.localdatasources.interfaces.SubjectLocalDataSource;
 import com.ttopacademy.localdatasources.roomdb.dao.SubjectDao;
 import com.ttopacademy.utitlities.interfaces.DateTimeUtility;
-
 import java.util.Date;
 import java.util.List;
 import javax.inject.Inject;
@@ -13,13 +12,13 @@ import javax.inject.Inject;
 public class SubjectLocalDataSourceImpl implements SubjectLocalDataSource {
 
     private final SubjectDao subjectDao;
-    private final DateTimeUtility dateTimeUtitlity;
+    private final DateTimeUtility dateTimeUtility;
 
     /** Constructs a new instance. */
     @Inject
-    public SubjectLocalDataSourceImpl(SubjectDao subjectDao, DateTimeUtility dateTimeUtitlity) {
+    public SubjectLocalDataSourceImpl(SubjectDao subjectDao, DateTimeUtility dateTimeUtility) {
         this.subjectDao = subjectDao;
-        this.dateTimeUtitlity = dateTimeUtitlity;
+        this.dateTimeUtility = dateTimeUtility;
     }
 
     @Override
@@ -29,7 +28,7 @@ public class SubjectLocalDataSourceImpl implements SubjectLocalDataSource {
         if (lastUpdated == null){
             return true;
         }
-        long dayDifference = dateTimeUtitlity.numberOfDaysbetween(todaysDate, lastUpdated);
+        long dayDifference = dateTimeUtility.numberOfDaysbetween(todaysDate, lastUpdated);
         return dayDifference > 1;
     }
 

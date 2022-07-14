@@ -15,6 +15,6 @@ public class FakeDateTimeUtility implements DateTimeUtility {
 
     @Override
     public long numberOfDaysbetween(Date firstDate, Date secondDate) {
-        return 0;
+        return 5;
     }
 }

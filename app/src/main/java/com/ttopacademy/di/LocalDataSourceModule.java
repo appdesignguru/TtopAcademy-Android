@@ -1,7 +1,5 @@
 package com.ttopacademy.di;
 
-
-import com.ttopacademy.localdatasources.fakes.FakePracticeQuestionLocalDataSource;
 import com.ttopacademy.localdatasources.interfaces.CategoryLocalDataSource;
 import com.ttopacademy.localdatasources.interfaces.CategorySubjectLocalDataSource;
 import com.ttopacademy.localdatasources.interfaces.CategorySubjectTopicLocalDataSource;
@@ -14,10 +12,10 @@ import com.ttopacademy.localdatasources.roomdb.CategoryLocalDataSourceImpl;
 import com.ttopacademy.localdatasources.roomdb.CategorySubjectLocalDataSourceImpl;
 import com.ttopacademy.localdatasources.roomdb.CategorySubjectTopicLocalDataSourceImpl;
 import com.ttopacademy.localdatasources.roomdb.CategorySubjectTopicVideoLocalDataSourceImpl;
+import com.ttopacademy.localdatasources.roomdb.PracticeQuestionLocalDataSourceImpl;
 import com.ttopacademy.localdatasources.roomdb.SubjectLocalDataSourceImpl;
 import com.ttopacademy.localdatasources.roomdb.TopicLocalDataSourceImpl;
 import com.ttopacademy.localdatasources.roomdb.VideoLocalDataSourceImpl;
-
 import javax.inject.Singleton;
 import dagger.Binds;
 import dagger.Module;
@@ -61,7 +59,7 @@ public abstract class LocalDataSourceModule {
     @Binds
     @Singleton
     public abstract PracticeQuestionLocalDataSource bindPracticeQuestionLocalDataSource(
-            FakePracticeQuestionLocalDataSource practiceQuestionLocalDataSourceImpl
+            PracticeQuestionLocalDataSourceImpl practiceQuestionLocalDataSourceImpl
 
     );
 

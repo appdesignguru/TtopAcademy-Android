@@ -34,7 +34,7 @@ public class FakePracticeQuestionLocalDataSource implements PracticeQuestionLoca
     }
 
     @Override
-    public boolean savePracticeQuestions(List<PracticeQuestion> practiceQuestions) {
+    public boolean savePracticeQuestions(String subjectName, List<PracticeQuestion> practiceQuestions) {
         this.practiceQuestions.clear();
         this.practiceQuestions.addAll(practiceQuestions);
         return true;

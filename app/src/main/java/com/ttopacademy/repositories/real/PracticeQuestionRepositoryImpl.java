@@ -56,11 +56,12 @@ public class PracticeQuestionRepositoryImpl implements PracticeQuestionRepositor
         if (result instanceof Result.Success){
             List<PracticeQuestionResponse> practiceQuestionResponses
                     = ((Result.Success<List<PracticeQuestionResponse>>) result).data;
-            updatePracticeQuestionLocalDataSource(practiceQuestionResponses);
+            updatePracticeQuestionLocalDataSource(subjectName, practiceQuestionResponses);
         }
     }
 
-    private void updatePracticeQuestionLocalDataSource(List<PracticeQuestionResponse> practiceQuestionResponses){
+    private void updatePracticeQuestionLocalDataSource(
+            String subjectName, List<PracticeQuestionResponse> practiceQuestionResponses){
         List<PracticeQuestion> practiceQuestions = new ArrayList<>();
         Date dateSavedToLocalDatabase = new Date();
         for (PracticeQuestionResponse practiceQuestionResponse : practiceQuestionResponses){
@@ -72,7 +73,7 @@ public class PracticeQuestionRepositoryImpl implements PracticeQuestionRepositor
                     practiceQuestionResponse.getCorrectOption(), dateSavedToLocalDatabase
             ));
         }
-        practiceQuestionLocalDataSource.savePracticeQuestions(practiceQuestions);
+        practiceQuestionLocalDataSource.savePracticeQuestions(subjectName, practiceQuestions);
     }
 
     private void postResultToMainThread(final List<PracticeQuestion> result,

@@ -4,7 +4,6 @@ import com.ttopacademy.localdatasources.entities.Video;
 import com.ttopacademy.localdatasources.interfaces.VideoLocalDataSource;
 import com.ttopacademy.localdatasources.roomdb.dao.VideoDao;
 import com.ttopacademy.utitlities.interfaces.DateTimeUtility;
-
 import java.util.Date;
 import java.util.List;
 import javax.inject.Inject;
@@ -13,13 +12,13 @@ import javax.inject.Inject;
 public class VideoLocalDataSourceImpl implements VideoLocalDataSource {
 
     private final VideoDao videoDao;
-    private final DateTimeUtility dateTimeUtitlity;
+    private final DateTimeUtility dateTimeUtility;
 
     /** Constructs a new instance. */
     @Inject
-    public VideoLocalDataSourceImpl(VideoDao videoDao, DateTimeUtility dateTimeUtitlity) {
+    public VideoLocalDataSourceImpl(VideoDao videoDao, DateTimeUtility dateTimeUtility) {
         this.videoDao = videoDao;
-        this.dateTimeUtitlity = dateTimeUtitlity;
+        this.dateTimeUtility = dateTimeUtility;
     }
 
     @Override
@@ -29,7 +28,7 @@ public class VideoLocalDataSourceImpl implements VideoLocalDataSource {
         if (lastUpdated == null){
             return true;
         }
-        long dayDifference = dateTimeUtitlity.numberOfDaysbetween(todaysDate, lastUpdated);
+        long dayDifference = dateTimeUtility.numberOfDaysbetween(todaysDate, lastUpdated);
         return dayDifference > 1;
     }
 
