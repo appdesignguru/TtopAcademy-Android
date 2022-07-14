@@ -20,7 +20,7 @@ public class FakeSubjectRemoteDataSource implements SubjectRemoteDataSource {
     public Result<List<SubjectResponse>> getAllSubjects() {
         List<SubjectResponse> mockSubjectResponses = new ArrayList<>();
         mockSubjectResponses.add(new SubjectResponse(1, 1, "Physics"));
-        mockSubjectResponses.add(new SubjectResponse(2, 2, "Biology"));
+        mockSubjectResponses.add(new SubjectResponse(2, 2, "Chemistry"));
 
         return new Result.Success<>(mockSubjectResponses);
     }

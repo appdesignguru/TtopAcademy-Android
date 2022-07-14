@@ -30,7 +30,7 @@ public class FakePracticeQuestionLocalDataSource implements PracticeQuestionLoca
                 result.add(practiceQuestion);
             }
         }
-        return practiceQuestions;
+        return result;
     }
 
     @Override

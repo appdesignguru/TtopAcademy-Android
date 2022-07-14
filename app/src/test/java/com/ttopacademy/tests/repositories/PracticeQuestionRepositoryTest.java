@@ -1,8 +1,6 @@
 package com.ttopacademy.tests.repositories;
 
 import static org.junit.Assert.assertEquals;
-
-import com.ttopacademy.localdatasources.entities.Category;
 import com.ttopacademy.localdatasources.entities.practicequestions.PracticeQuestion;
 import com.ttopacademy.localdatasources.fakes.FakePracticeQuestionLocalDataSource;
 import com.ttopacademy.localdatasources.interfaces.PracticeQuestionLocalDataSource;
@@ -10,11 +8,9 @@ import com.ttopacademy.remotedatasources.fakes.FakePracticeQuestionRemoteDataSou
 import com.ttopacademy.remotedatasources.interfaces.PracticeQuestionRemoteDataSource;
 import com.ttopacademy.repositories.interfaces.PracticeQuestionRepository;
 import com.ttopacademy.repositories.real.PracticeQuestionRepositoryImpl;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import java.util.List;
 
 public class PracticeQuestionRepositoryTest {
