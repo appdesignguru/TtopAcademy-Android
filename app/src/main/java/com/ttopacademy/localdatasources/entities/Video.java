@@ -1,5 +1,6 @@
 package com.ttopacademy.localdatasources.entities;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import java.util.Date;
@@ -11,6 +12,8 @@ public class Video {
     @PrimaryKey
     private final int videoID;
 
+    @ColumnInfo(defaultValue = "0")
+    private final int number;
     private final String title;
     private final String youtubeID;
     private final String size;
@@ -19,10 +22,11 @@ public class Video {
     private Date dateSavedToLocalDatabase;
 
     /** Constructs a new instance. */
-    public Video(int videoID, String title, String youtubeID, String size,
+    public Video(int videoID, int number, String title, String youtubeID, String size,
                  String solutionVideoYoutubeID, String solutionVideoSize,
                  Date dateSavedToLocalDatabase) {
         this.videoID = videoID;
+        this.number = number;
         this.title = title;
         this.youtubeID = youtubeID;
         this.size = size;
@@ -34,6 +38,11 @@ public class Video {
     /** Returns videoID. */
     public int getVideoID() {
         return videoID;
+    }
+
+    /** Returns video number. */
+    public int getNumber() {
+        return number;
     }
 
     /** Returns video title. */

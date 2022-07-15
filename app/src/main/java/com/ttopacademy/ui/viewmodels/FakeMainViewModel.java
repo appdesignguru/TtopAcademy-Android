@@ -82,11 +82,11 @@ public class FakeMainViewModel extends ViewModel implements MainViewModel {
 
         List<Video> testVideos = new ArrayList<>();
         testVideos.add(
-                new Video(1, "Video Title 1", "youtubeID 1", "10",
+                new Video(1,  1, "Video Title 1", "youtubeID 1", "10",
                         "solyoutubeID 1", "10", new Date())
         );
         testVideos.add(
-                new Video(2, "Video Title 2", "youtubeID 2", "10",
+                new Video(2,  1, "Video Title 2", "youtubeID 2", "10",
                         "solyoutubeID 2", "10", new Date())
         );
 

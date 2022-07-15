@@ -19,9 +19,9 @@ public class FakeVideoRemoteDataSource implements VideoRemoteDataSource {
     @Override
     public Result<List<VideoResponse>> getVideos(int categorySubjectTopicID) {
         List<VideoResponse> mockVideoResponses = new ArrayList<>();
-        mockVideoResponses.add(new VideoResponse(1, "Video 1", "youtube 1", "10",
+        mockVideoResponses.add(new VideoResponse(1, 1, "Video 1", "youtube 1", "10",
                 "solution youtube 1", "10"));
-        mockVideoResponses.add(new VideoResponse(2, "Video 2", "youtube 2", "10",
+        mockVideoResponses.add(new VideoResponse(2, 1, "Video 2", "youtube 2", "10",
                 "solution youtube 2", "10"));
 
 

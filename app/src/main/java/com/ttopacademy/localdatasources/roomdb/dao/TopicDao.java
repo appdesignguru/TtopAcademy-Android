@@ -13,7 +13,7 @@ import java.util.List;
 public interface TopicDao {
 
     /** Returns topics with given parameters. */
-    @Query("SELECT * FROM topic WHERE topicID IN (:topicIDs)")
+    @Query("SELECT * FROM topic WHERE topicID IN (:topicIDs) ORDER BY number")
     List<Topic> getTopics(List<Integer> topicIDs);
 
     /** Saves the topics.

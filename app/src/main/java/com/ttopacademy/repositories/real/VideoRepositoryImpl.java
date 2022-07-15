@@ -45,7 +45,7 @@ public class VideoRepositoryImpl implements VideoRepository {
         List<Video> videos = new ArrayList<>();
         Date dateSavedToLocalDatabase = new Date();
         for (VideoResponse videoResponse : videoResponses){
-            videos.add(new Video(videoResponse.getVideoID(), videoResponse.getTitle(),
+            videos.add(new Video(videoResponse.getVideoID(), videoResponse.getNumber(), videoResponse.getTitle(),
                     videoResponse.getYoutubeID(), videoResponse.getSize(),
                     videoResponse.getSolutionVideoYoutubeID(), videoResponse.getSolutionVideoSize(),
                     dateSavedToLocalDatabase));

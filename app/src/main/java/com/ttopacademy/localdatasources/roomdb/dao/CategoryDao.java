@@ -13,7 +13,7 @@ import java.util.List;
 public interface CategoryDao {
 
     /** Returns all categories. */
-    @Query("SELECT * FROM category")
+    @Query("SELECT * FROM category ORDER BY number")
     List<Category> getAllCategories();
 
     /** Saves the categories. If any category already exists in the database, it replaces it. */

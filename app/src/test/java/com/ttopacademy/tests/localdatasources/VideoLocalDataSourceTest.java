@@ -28,9 +28,9 @@ public class VideoLocalDataSourceTest {
 
         // PreSave
         List<Video> videos = new ArrayList<>();
-        videos.add(new Video(1, "Video 1", "youtube 1", "10",
+        videos.add(new Video(1, 1, "Video 1", "youtube 1", "10",
                 "solution youtube 1", "10", new Date()));
-        videos.add(new Video(2, "Video 2", "youtube 2", "10",
+        videos.add(new Video(2, 2, "Video 2", "youtube 2", "10",
                 "solution youtube 2", "10", new Date()));
 
         videoLocalDataSource.saveVideos(videos);
@@ -62,7 +62,7 @@ public class VideoLocalDataSourceTest {
     @Test
     public void saveVideos_ShouldReturnTrueAfterSaving(){
         List<Video> videos = new ArrayList<>();
-        videos.add(new Video(3, "Video 3", "youtube 3", "10",
+        videos.add(new Video(3, 3, "Video 3", "youtube 3", "10",
                 "solution youtube 3", "10", new Date()));
 
         boolean result = videoLocalDataSource.saveVideos(videos);

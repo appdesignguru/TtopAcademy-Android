@@ -14,7 +14,7 @@ import java.util.List;
 public interface MathPracticeQuestionDao {
 
     /** Returns practice questions for given parameter. */
-    @Query("SELECT * FROM mathPracticeQuestion WHERE videoID == :videoID")
+    @Query("SELECT * FROM mathPracticeQuestion WHERE videoID == :videoID ORDER BY questionNumber")
     List<PracticeQuestion> getPracticeQuestions(int videoID);
 
     /** Saves the practiceQuestions.

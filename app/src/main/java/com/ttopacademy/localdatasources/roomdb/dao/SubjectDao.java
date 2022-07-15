@@ -13,7 +13,7 @@ import java.util.List;
 public interface SubjectDao {
 
     /** Returns subjects with given parameters. */
-    @Query("SELECT * FROM subject WHERE subjectID IN (:subjectIDs)")
+    @Query("SELECT * FROM subject WHERE subjectID IN (:subjectIDs) ORDER BY number")
     List<Subject> getSubjects(List<Integer> subjectIDs);
 
     /** Saves the subjects.
