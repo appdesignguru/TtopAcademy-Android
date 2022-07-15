@@ -30,7 +30,7 @@ public class CategorySubjectTopicVideoLocalDataSourceImpl implements CategorySub
         if (lastUpdated == null){
             return true;
         }
-        long dayDifference = dateTimeUtility.numberOfDaysbetween(todaysDate, lastUpdated);
+        long dayDifference = dateTimeUtility.numberOfDaysBetween(todaysDate, lastUpdated);
         return dayDifference > 1;
     }
 

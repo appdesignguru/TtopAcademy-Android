@@ -4,5 +4,5 @@ import java.util.Date;
 
 public interface DateTimeUtility {
 
-    long numberOfDaysbetween(Date firstDate, Date secondDate);
+    long numberOfDaysBetween(Date firstDate, Date secondDate);
 }

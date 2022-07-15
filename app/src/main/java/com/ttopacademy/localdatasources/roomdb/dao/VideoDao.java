@@ -13,7 +13,7 @@ import java.util.List;
 public interface VideoDao {
 
     /** Returns videos with given parameters. */
-    @Query("SELECT * FROM video WHERE videoID IN (:videoIDs)")
+    @Query("SELECT * FROM video WHERE videoID IN (:videoIDs) ORDER BY number")
     List<Video> getVideos(List<Integer> videoIDs);
 
     /** Saves the videos.
