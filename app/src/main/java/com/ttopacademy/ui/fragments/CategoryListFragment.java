@@ -104,7 +104,6 @@ public class CategoryListFragment extends Fragment {
         public CategoryHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
             View view = LayoutInflater.from(viewGroup.getContext())
                     .inflate(R.layout.category_list_item, viewGroup, false);
-
             return new CategoryHolder(view);
         }
 

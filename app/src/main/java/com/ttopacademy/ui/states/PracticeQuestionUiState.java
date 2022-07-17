@@ -30,7 +30,7 @@ public class PracticeQuestionUiState {
         this.selectedVideo = selectedVideo;
     }
 
-    /** Checks whether videos are currently being fetched. */
+    /** Checks whether practice questions are currently being fetched. */
     public boolean isFetchingPracticeQuestions() {
         return fetchingPracticeQuestions;
     }

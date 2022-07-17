@@ -10,8 +10,10 @@ import androidx.lifecycle.ViewModelProvider;
 import com.ttopacademy.R;
 import com.ttopacademy.ui.viewmodels.FakeMainViewModel;
 import com.ttopacademy.ui.viewmodels.MainViewModel;
+import dagger.hilt.android.AndroidEntryPoint;
 
 /** Fragment for showing practice questions. */
+@AndroidEntryPoint
 public class PracticeQuestionFragment extends Fragment {
 
     private MainViewModel mainViewModel;
