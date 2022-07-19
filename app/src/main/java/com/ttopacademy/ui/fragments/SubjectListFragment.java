@@ -28,7 +28,6 @@ public class SubjectListFragment extends Fragment {
     private ProgressBar progressBar;
     private List<Subject> subjects;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.fragment_subject_list, container, false);
