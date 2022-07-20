@@ -6,6 +6,7 @@ import com.ttopacademy.localdatasources.roomdb.dao.PhysicsPracticeQuestionDao;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.inject.Inject;
 
 /** Fake PhysicsPracticeQuestionDao dao implementation class. Used for unit testing only. */
 public class FakePhysicsPracticeQuestionDao implements PhysicsPracticeQuestionDao {
@@ -13,6 +14,7 @@ public class FakePhysicsPracticeQuestionDao implements PhysicsPracticeQuestionDa
     private final List<PhysicsPracticeQuestion> physicsPracticeQuestions = new ArrayList<>();
 
     /** Constructs a new instance. */
+    @Inject
     public FakePhysicsPracticeQuestionDao() {
 
     }

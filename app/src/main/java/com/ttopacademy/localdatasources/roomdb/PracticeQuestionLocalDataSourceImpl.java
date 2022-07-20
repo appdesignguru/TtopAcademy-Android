@@ -9,6 +9,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+/** PracticeQuestion local data source implementation class. */
 public class PracticeQuestionLocalDataSourceImpl implements PracticeQuestionLocalDataSource {
 
     private final PracticeQuestionLocalDataSourceFactory practiceQuestionLocalDataSourceFactory;
